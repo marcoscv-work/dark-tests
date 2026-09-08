@@ -32,7 +32,7 @@
     "title": "Search Blueprints: editor",
     "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_search_experiences_web_internal_blueprint_admin_portlet_SXPBlueprintAdminPortlet",
     "ok": true,
-    "note": "paso extra falló: locator.click: Timeout 8000ms exceeded.",
+    "note": "",
     "scheme": "dark"
   },
   {
