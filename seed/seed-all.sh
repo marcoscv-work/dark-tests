@@ -29,6 +29,7 @@ node seed/seed-api.js /guest
 
 # 3. CMS space content, pending workflow items and Commerce orders
 node seed/seed-space-orders.js
+node seed/seed-cms.js
 
 # 4. Data that only the UI can create
 node seed/seed-ui.js "/$SITE"
