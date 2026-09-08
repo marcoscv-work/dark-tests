@@ -24,6 +24,7 @@ Empty screens hide most dark mode issues, so the capture runs against seeded dat
 - Sample sites created from the site initializers that ship in the bundle: **Masterclass** (web content, blogs, documents, pages, navigation menus, fragments, collections) and **Minium Full** (catalog, products, price lists, promotions, inventory, channel, accounts and orders).
 - Demo modules from the repository deployed into `osgi/portal`: `users-admin-demo` and `portal-workflow-metrics-demo` with their `*-demo-data-creator` dependencies. Do **not** deploy `message-boards-demo`: it inserts thousands of messages inside a single transaction and blocks the portal for an hour on Hypersonic.
 - `seed/seed-api.js`: Knowledge Base, Message Boards, blogs, web content, documents, a picklist, an object with entries, a notification template, a search blueprint and a publication, through REST APIs. Idempotent.
+- `seed/seed-space-orders.js`: documents and web contents inside the first CMS Space (with Single Approver so two items stay pending) and four Commerce orders plus a shipment on the Minium Full data. The CMS only lists assets that live in a Space, so site content never shows there.
 - `seed/seed-ui.js`: a published form, a synonym set, a result ranking and Single Approver on Blogs, driven through the UI with Playwright.
 
 `bash seed/seed-all.sh` runs everything above and then recaptures every team.

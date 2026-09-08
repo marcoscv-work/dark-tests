@@ -27,13 +27,16 @@ fi
 node seed/seed-api.js "/$SITE"
 node seed/seed-api.js /guest
 
-# 3. Data that only the UI can create
+# 3. CMS space content, pending workflow items and Commerce orders
+node seed/seed-space-orders.js
+
+# 4. Data that only the UI can create
 node seed/seed-ui.js "/$SITE"
 
-# 4. Screenshots
+# 5. Screenshots
 SHOTS_SITE="$SITE" node capturar.js all
 node bpm/capturar-bpm.js
 
-# 5. Gallery
+# 6. Gallery
 python3 build-gallery.py
 log "done. Review the screenshots, then: git add -A && git commit -m 'Recapture with sample data' && git push"

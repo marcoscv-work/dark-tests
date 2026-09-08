@@ -31,7 +31,12 @@ const SCREENS = [
 	}},
 	{id: '08-workflow-metrics', dir: 'workflow', file: '03-metrics', title: 'Workflow Metrics', url: CP + 'com_liferay_portal_workflow_metrics_web_internal_portlet_WorkflowMetricsPortlet'},
 	{id: '09-workflow-submissions', dir: 'workflow', file: '04-submissions', title: 'Workflow: Submissions (instances)', url: CP + 'com_liferay_portal_workflow_web_internal_portlet_ControlPanelWorkflowInstancePortlet'},
-	{id: '10-instance-tracker', dir: 'workflow', file: '05-instance-tracker', title: 'Workflow: Instance Tracker', url: CP + 'com_liferay_portal_workflow_instance_tracker_web_internal_portlet_WorkflowInstanceTrackerPortlet'},
+	{id: '10-instance-tracker', dir: 'workflow', file: '05-instance-tracker', title: 'Workflow: Instance Tracker', url: CP + 'com_liferay_portal_workflow_web_internal_portlet_ControlPanelWorkflowInstancePortlet', after: async (page) => {
+		await page.locator('table tbody tr td a, .table-list-title a').first().click({timeout: 8000});
+		await page.waitForTimeout(3000);
+		const tracker = page.getByRole('link', {name: /view diagram|instance tracker|track/i}).or(page.getByRole('button', {name: /view diagram|instance tracker|track/i})).first();
+		if (await tracker.count()) { await tracker.click({timeout: 8000}); await page.waitForTimeout(4000); }
+	}},
 	{id: '11-site-workflow', dir: 'workflow', file: '06-configuracion-sitio', title: 'Workflow: site configuration', url: SITE + 'com_liferay_portal_workflow_web_internal_portlet_SiteAdministrationWorkflowPortlet'},
 	{id: '12-my-workflow-tasks', dir: 'workflow', file: '07-my-workflow-tasks', title: 'My Workflow Tasks', url: `${BASE}/user/test/~/control_panel/manage?p_p_id=com_liferay_portal_workflow_web_internal_portlet_UserWorkflowPortlet`},
 	{id: '13-kaleo-forms', dir: 'workflow', file: '08-kaleo-forms-admin', title: 'Kaleo Forms Admin', url: SITE + 'com_liferay_portal_workflow_kaleo_forms_web_portlet_KaleoFormsAdminPortlet'},

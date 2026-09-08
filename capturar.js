@@ -53,11 +53,11 @@ const TEAMS = {
 		{dir: 'pages', file: '02-configuracion-pagina', title: 'Pages: page configuration', url: SITE + 'com_liferay_layout_admin_web_portlet_GroupPagesPortlet', after: clickFirstRow},
 		{dir: 'page-editor', file: '01-editor', title: 'Page Editor', url: `${SITE_HOME}/home?p_l_mode=edit`, wait: 6000},
 		{dir: 'page-editor', file: '02-editor-fragments-panel', title: 'Page Editor: Fragments and Widgets panel', url: `${SITE_HOME}/home?p_l_mode=edit`, wait: 6000, after: async (page) => {
-			await page.getByRole('button', {name: /fragments and widgets/i}).first().click({timeout: 8000});
+			await page.locator('button[aria-label*="Fragments and Widgets" i], [title*="Fragments and Widgets" i], button[aria-label*="Fragments" i]').first().click({timeout: 8000});
 			await page.waitForTimeout(2500);
 		}},
 		{dir: 'page-templates', file: '01-lista', title: 'Page Templates', url: SITE + 'com_liferay_layout_page_template_admin_web_portlet_LayoutPageTemplatesPortlet'},
-		{dir: 'page-templates', file: '02-master-pages', title: 'Page Templates: Master Pages', url: SITE + 'com_liferay_layout_page_template_admin_web_portlet_LayoutPageTemplatesPortlet', after: clickText(/master pages/i)},
+		{dir: 'page-templates', file: '02-master-pages', title: 'Page Templates: Master Pages', url: SITE + 'com_liferay_layout_page_template_admin_web_portlet_LayoutPageTemplatesPortlet&_com_liferay_layout_page_template_admin_web_portlet_LayoutPageTemplatesPortlet_tabs1=master-layouts'},
 		{dir: 'page-templates', file: '03-display-page-templates', title: 'Page Templates: Display Page Templates', url: SITE + 'com_liferay_layout_page_template_admin_web_portlet_LayoutPageTemplatesPortlet', after: clickText(/display page templates/i)},
 		{dir: 'fragments', file: '01-lista', title: 'Fragments', url: SITE + 'com_liferay_fragment_web_portlet_FragmentPortlet'},
 		{dir: 'fragments', file: '02-editor', title: 'Fragments: editor', url: SITE + 'com_liferay_fragment_web_portlet_FragmentPortlet', after: clickFirstRow},
@@ -78,7 +78,7 @@ const TEAMS = {
 		{dir: 'cms', file: '13-broken-links', title: 'CMS: Broken Links', url: CMS_SITE + '/broken-links', wait: 6000},
 		{dir: 'cms', file: '14-bulk-action-task-report', title: 'CMS: Bulk Action Task Report', url: CMS_SITE + '/bulk-action-task-report', wait: 6000},
 		{dir: 'web-content', file: '01-lista', title: 'Web Content', url: SITE + 'com_liferay_journal_web_portlet_JournalPortlet'},
-		{dir: 'web-content', file: '02-editor', title: 'Web Content: editor', url: SITE + 'com_liferay_journal_web_portlet_JournalPortlet', after: clickFirstRow},
+		{dir: 'web-content', file: '02-editor', title: 'Web Content: editor', url: SITE + 'com_liferay_journal_web_portlet_JournalPortlet', after: clickText(/accessibility statement|welcome to the dark side/i, 5000)},
 		{dir: 'web-content', file: '03-structures', title: 'Web Content: Structures', url: SITE + 'com_liferay_journal_web_portlet_JournalPortlet', after: clickText(/^structures$/i)},
 		{dir: 'web-content', file: '04-templates', title: 'Web Content: Templates', url: SITE + 'com_liferay_journal_web_portlet_JournalPortlet', after: clickText(/^templates$/i)},
 		{dir: 'blogs', file: '01-lista', title: 'Blogs', url: SITE + 'com_liferay_blogs_web_portlet_BlogsAdminPortlet'},
