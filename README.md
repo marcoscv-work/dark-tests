@@ -17,12 +17,23 @@ bpm/capturar-bpm.js         Playwright capture script for BPM
 
 Teams map to the Dark Mode review tasks under epic [LPD-93232](https://liferay.atlassian.net/browse/LPD-93232): BPM ([LPD-105050](https://liferay.atlassian.net/browse/LPD-105050)), Content Management ([LPD-105038](https://liferay.atlassian.net/browse/LPD-105038)), Page Management ([LPD-105037](https://liferay.atlassian.net/browse/LPD-105037)), Commerce ([LPD-105042](https://liferay.atlassian.net/browse/LPD-105042)), Search ([LPD-104000](https://liferay.atlassian.net/browse/LPD-104000)), Site Management ([LPD-103839](https://liferay.atlassian.net/browse/LPD-103839)).
 
+## Sample data
+
+Empty screens hide most dark mode issues, so the capture runs against seeded data:
+
+- Sample sites created from the site initializers that ship in the bundle: **Masterclass** (web content, blogs, documents, pages, navigation menus, fragments, collections) and **Minium Full** (catalog, products, price lists, promotions, inventory, channel, accounts and orders).
+- Demo modules from the repository deployed into `osgi/portal`: `users-admin-demo` and `portal-workflow-metrics-demo` with their `*-demo-data-creator` dependencies. Do **not** deploy `message-boards-demo`: it inserts thousands of messages inside a single transaction and blocks the portal for an hour on Hypersonic.
+- `seed/seed-api.js`: Knowledge Base, Message Boards, blogs, web content, documents, a picklist, an object with entries, a notification template, a search blueprint and a publication, through REST APIs. Idempotent.
+- `seed/seed-ui.js`: a published form, a synonym set, a result ranking and Single Approver on Blogs, driven through the UI with Playwright.
+
+`bash seed/seed-all.sh` runs everything above and then recaptures every team.
+
 ## Capturing again
 
 Requirements: a local bundle on `http://localhost:8080`, the user `test@liferay.com` / `test`, the feature flag `LPD-57922` enabled (Control Panel > Instance Settings > Feature Flags > Beta), and Playwright available to Node (either `npm install playwright` next to the scripts or the copy inside `liferay-portal/modules/node_modules`).
 
 ```bash
-node capturar.js all              # every team except BPM
+SHOTS_SITE=masterclass node capturar.js all   # every team except BPM; SHOTS_SITE picks the site for site-scoped screens
 node capturar.js commerce         # one team
 node bpm/capturar-bpm.js          # BPM
 python3 build-gallery.py          # rebuild index.html

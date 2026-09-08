@@ -75,7 +75,7 @@
     "dir": "collections",
     "file": "01-lista.jpg",
     "title": "Collections",
-    "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_asset_list_web_portlet_AssetListPortlet",
+    "url": "http://localhost:8080/group/masterclass/~/control_panel/manage?p_p_id=com_liferay_asset_list_web_portlet_AssetListPortlet",
     "ok": true,
     "note": "",
     "scheme": "dark"
@@ -84,18 +84,18 @@
     "dir": "collections",
     "file": "02-editor.jpg",
     "title": "Collections: editor",
-    "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_asset_list_web_portlet_AssetListPortlet",
+    "url": "http://localhost:8080/group/masterclass/~/control_panel/manage?p_p_id=com_liferay_asset_list_web_portlet_AssetListPortlet",
     "ok": true,
-    "note": "paso extra falló: locator.click: Timeout 8000ms exceeded.",
+    "note": "",
     "scheme": "dark"
   },
   {
     "dir": "search-page",
     "file": "01-resultados.jpg",
     "title": "Site search page (widgets)",
-    "url": "http://localhost:8080/web/guest/search?q=liferay",
+    "url": "http://localhost:8080/web/masterclass/search?q=dark",
     "ok": true,
-    "note": "",
+    "note": " pantalla no disponible;",
     "scheme": "dark"
   }
 ]

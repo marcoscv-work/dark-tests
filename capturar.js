@@ -1,6 +1,7 @@
 // Captures Liferay administration screens in dark mode, per team.
 // Usage: node capturar.js <team|all>   (teams: search, site-management, page-management, content-management, commerce)
 // Requires a local bundle on http://localhost:8080 with test@liferay.com / test and feature flag LPD-57922 enabled.
+// SHOTS_SITE=<friendly url> picks the site used for site-scoped screens (default guest).
 let pw; try { pw = require('playwright'); } catch (e) { pw = require('/Users/marcoscastro/projects/liferay-portal/modules/node_modules/playwright'); }
 const {chromium} = pw;
 const fs = require('fs');
@@ -9,7 +10,9 @@ const path = require('path');
 const BASE = 'http://localhost:8080';
 const ROOT = process.env.SHOTS_OUT || path.join(process.env.HOME, 'Desktop', 'dark-mode-reviews');
 const CP = `${BASE}/group/control_panel/manage?p_p_id=`;
-const SITE = `${BASE}/group/guest/~/control_panel/manage?p_p_id=`;
+const SITE_KEY = (process.env.SHOTS_SITE || 'guest').replace(/^\//, '');
+const SITE = `${BASE}/group/${SITE_KEY}/~/control_panel/manage?p_p_id=`;
+const SITE_HOME = `${BASE}/web/${SITE_KEY}`;
 const CMS_SITE = `${BASE}/web/cms`;
 
 const clickFirstRow = async (page) => {
@@ -33,7 +36,7 @@ const TEAMS = {
 		{dir: 'result-rankings', file: '02-editor', title: 'Result Rankings: editor', url: CP + 'com_liferay_portal_search_tuning_rankings_web_internal_portlet_ResultRankingsPortlet', after: clickFirstRow},
 		{dir: 'collections', file: '01-lista', title: 'Collections', url: SITE + 'com_liferay_asset_list_web_portlet_AssetListPortlet'},
 		{dir: 'collections', file: '02-editor', title: 'Collections: editor', url: SITE + 'com_liferay_asset_list_web_portlet_AssetListPortlet', after: clickFirstRow},
-		{dir: 'search-page', file: '01-resultados', title: 'Site search page (widgets)', url: `${BASE}/web/guest/search?q=liferay`},
+		{dir: 'search-page', file: '01-resultados', title: 'Site search page (widgets)', url: `${SITE_HOME}/search?q=dark`},
 	],
 	'site-management': [
 		{dir: 'sites', file: '01-lista', title: 'Sites', url: CP + 'com_liferay_site_admin_web_portlet_SiteAdminPortlet'},
@@ -48,8 +51,8 @@ const TEAMS = {
 	'page-management': [
 		{dir: 'pages', file: '01-arbol-paginas', title: 'Pages: page tree', url: SITE + 'com_liferay_layout_admin_web_portlet_GroupPagesPortlet'},
 		{dir: 'pages', file: '02-configuracion-pagina', title: 'Pages: page configuration', url: SITE + 'com_liferay_layout_admin_web_portlet_GroupPagesPortlet', after: clickFirstRow},
-		{dir: 'page-editor', file: '01-editor', title: 'Page Editor', url: `${BASE}/web/guest/home?p_l_mode=edit`, wait: 6000},
-		{dir: 'page-editor', file: '02-editor-fragments-panel', title: 'Page Editor: Fragments and Widgets panel', url: `${BASE}/web/guest/home?p_l_mode=edit`, wait: 6000, after: async (page) => {
+		{dir: 'page-editor', file: '01-editor', title: 'Page Editor', url: `${SITE_HOME}/home?p_l_mode=edit`, wait: 6000},
+		{dir: 'page-editor', file: '02-editor-fragments-panel', title: 'Page Editor: Fragments and Widgets panel', url: `${SITE_HOME}/home?p_l_mode=edit`, wait: 6000, after: async (page) => {
 			await page.getByRole('button', {name: /fragments and widgets/i}).first().click({timeout: 8000});
 			await page.waitForTimeout(2500);
 		}},

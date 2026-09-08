@@ -3,7 +3,7 @@
     "dir": "pages",
     "file": "01-arbol-paginas.jpg",
     "title": "Pages: page tree",
-    "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_layout_admin_web_portlet_GroupPagesPortlet",
+    "url": "http://localhost:8080/group/masterclass/~/control_panel/manage?p_p_id=com_liferay_layout_admin_web_portlet_GroupPagesPortlet",
     "ok": true,
     "note": "",
     "scheme": "dark"
@@ -12,7 +12,7 @@
     "dir": "pages",
     "file": "02-configuracion-pagina.jpg",
     "title": "Pages: page configuration",
-    "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_layout_admin_web_portlet_GroupPagesPortlet",
+    "url": "http://localhost:8080/group/masterclass/~/control_panel/manage?p_p_id=com_liferay_layout_admin_web_portlet_GroupPagesPortlet",
     "ok": true,
     "note": "",
     "scheme": "dark"
@@ -21,7 +21,7 @@
     "dir": "page-editor",
     "file": "01-editor.jpg",
     "title": "Page Editor",
-    "url": "http://localhost:8080/web/guest/home?p_l_mode=edit",
+    "url": "http://localhost:8080/web/masterclass/home?p_l_mode=edit",
     "ok": true,
     "note": "",
     "scheme": "dark"
@@ -30,7 +30,7 @@
     "dir": "page-editor",
     "file": "02-editor-fragments-panel.jpg",
     "title": "Page Editor: Fragments and Widgets panel",
-    "url": "http://localhost:8080/web/guest/home?p_l_mode=edit",
+    "url": "http://localhost:8080/web/masterclass/home?p_l_mode=edit",
     "ok": true,
     "note": "paso extra falló: locator.click: Timeout 8000ms exceeded.",
     "scheme": "dark"
@@ -39,7 +39,7 @@
     "dir": "page-templates",
     "file": "01-lista.jpg",
     "title": "Page Templates",
-    "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_layout_page_template_admin_web_portlet_LayoutPageTemplatesPortlet",
+    "url": "http://localhost:8080/group/masterclass/~/control_panel/manage?p_p_id=com_liferay_layout_page_template_admin_web_portlet_LayoutPageTemplatesPortlet",
     "ok": true,
     "note": "",
     "scheme": "dark"
@@ -48,7 +48,7 @@
     "dir": "page-templates",
     "file": "02-master-pages.jpg",
     "title": "Page Templates: Master Pages",
-    "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_layout_page_template_admin_web_portlet_LayoutPageTemplatesPortlet",
+    "url": "http://localhost:8080/group/masterclass/~/control_panel/manage?p_p_id=com_liferay_layout_page_template_admin_web_portlet_LayoutPageTemplatesPortlet",
     "ok": true,
     "note": "paso extra falló: locator.click: Timeout 8000ms exceeded.",
     "scheme": "dark"
@@ -57,7 +57,7 @@
     "dir": "page-templates",
     "file": "03-display-page-templates.jpg",
     "title": "Page Templates: Display Page Templates",
-    "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_layout_page_template_admin_web_portlet_LayoutPageTemplatesPortlet",
+    "url": "http://localhost:8080/group/masterclass/~/control_panel/manage?p_p_id=com_liferay_layout_page_template_admin_web_portlet_LayoutPageTemplatesPortlet",
     "ok": true,
     "note": "",
     "scheme": "dark"
@@ -66,7 +66,7 @@
     "dir": "fragments",
     "file": "01-lista.jpg",
     "title": "Fragments",
-    "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_fragment_web_portlet_FragmentPortlet",
+    "url": "http://localhost:8080/group/masterclass/~/control_panel/manage?p_p_id=com_liferay_fragment_web_portlet_FragmentPortlet",
     "ok": true,
     "note": "",
     "scheme": "dark"
@@ -75,7 +75,7 @@
     "dir": "fragments",
     "file": "02-editor.jpg",
     "title": "Fragments: editor",
-    "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_fragment_web_portlet_FragmentPortlet",
+    "url": "http://localhost:8080/group/masterclass/~/control_panel/manage?p_p_id=com_liferay_fragment_web_portlet_FragmentPortlet",
     "ok": true,
     "note": "",
     "scheme": "dark"

@@ -23,7 +23,7 @@
     "title": "Products: editor",
     "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_commerce_product_definitions_web_internal_portlet_CPDefinitionsPortlet",
     "ok": true,
-    "note": "paso extra falló: locator.click: Timeout 8000ms exceeded.",
+    "note": "",
     "scheme": "dark"
   },
   {
@@ -122,7 +122,7 @@
     "title": "Channels: editor",
     "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_commerce_channel_web_internal_portlet_CommerceChannelsPortlet",
     "ok": true,
-    "note": "paso extra falló: locator.click: Timeout 8000ms exceeded.",
+    "note": "",
     "scheme": "dark"
   },
   {
