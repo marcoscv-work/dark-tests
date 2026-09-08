@@ -1,0 +1,101 @@
+[
+  {
+    "dir": "search-admin",
+    "file": "01-search-admin.jpg",
+    "title": "Search Admin",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_portal_search_admin_web_portlet_SearchAdminPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "search-admin",
+    "file": "02-search-admin-field-mappings.jpg",
+    "title": "Search Admin: Field Mappings",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_portal_search_admin_web_portlet_SearchAdminPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "blueprints",
+    "file": "01-lista.jpg",
+    "title": "Search Blueprints",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_search_experiences_web_internal_blueprint_admin_portlet_SXPBlueprintAdminPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "blueprints",
+    "file": "02-editor.jpg",
+    "title": "Search Blueprints: editor",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_search_experiences_web_internal_blueprint_admin_portlet_SXPBlueprintAdminPortlet",
+    "ok": true,
+    "note": "paso extra falló: locator.click: Timeout 8000ms exceeded.",
+    "scheme": "dark"
+  },
+  {
+    "dir": "blueprints",
+    "file": "03-elements.jpg",
+    "title": "Search Blueprints: Elements",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_search_experiences_web_internal_blueprint_admin_portlet_SXPBlueprintAdminPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "synonyms",
+    "file": "01-lista.jpg",
+    "title": "Synonyms",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_portal_search_tuning_synonyms_web_internal_portlet_SynonymsPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "result-rankings",
+    "file": "01-lista.jpg",
+    "title": "Result Rankings",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_portal_search_tuning_rankings_web_internal_portlet_ResultRankingsPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "result-rankings",
+    "file": "02-editor.jpg",
+    "title": "Result Rankings: editor",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_portal_search_tuning_rankings_web_internal_portlet_ResultRankingsPortlet",
+    "ok": true,
+    "note": "paso extra falló: locator.click: Timeout 8000ms exceeded.",
+    "scheme": "dark"
+  },
+  {
+    "dir": "collections",
+    "file": "01-lista.jpg",
+    "title": "Collections",
+    "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_asset_list_web_portlet_AssetListPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "collections",
+    "file": "02-editor.jpg",
+    "title": "Collections: editor",
+    "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_asset_list_web_portlet_AssetListPortlet",
+    "ok": true,
+    "note": "paso extra falló: locator.click: Timeout 8000ms exceeded.",
+    "scheme": "dark"
+  },
+  {
+    "dir": "search-page",
+    "file": "01-resultados.jpg",
+    "title": "Página de búsqueda del sitio (widgets)",
+    "url": "http://localhost:8080/web/guest/search?q=liferay",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  }
+]

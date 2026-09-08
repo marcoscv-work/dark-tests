@@ -1,0 +1,74 @@
+[
+  {
+    "dir": "sites",
+    "file": "01-lista.jpg",
+    "title": "Sites",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_site_admin_web_portlet_SiteAdminPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "sites",
+    "file": "02-site-settings.jpg",
+    "title": "Site Settings",
+    "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_site_admin_web_portlet_SiteSettingsPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "sites",
+    "file": "03-site-templates.jpg",
+    "title": "Site Templates",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_site_admin_web_portlet_SiteTemplatesPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "navigation-menus",
+    "file": "01-lista.jpg",
+    "title": "Navigation Menus",
+    "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_site_navigation_admin_web_portlet_SiteNavigationAdminPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "navigation-menus",
+    "file": "02-editor.jpg",
+    "title": "Navigation Menus: editor",
+    "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_site_navigation_admin_web_portlet_SiteNavigationAdminPortlet",
+    "ok": true,
+    "note": "paso extra falló: locator.click: Timeout 8000ms exceeded.",
+    "scheme": "dark"
+  },
+  {
+    "dir": "publications",
+    "file": "01-lista.jpg",
+    "title": "Publications",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_change_tracking_web_portlet_PublicationsPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "export-import",
+    "file": "01-export.jpg",
+    "title": "Export / Import",
+    "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_exportimport_web_portlet_ExportImportPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "staging",
+    "file": "01-staging.jpg",
+    "title": "Staging",
+    "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_staging_processes_web_portlet_StagingProcessesPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  }
+]

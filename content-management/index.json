@@ -1,0 +1,227 @@
+[
+  {
+    "dir": "cms",
+    "file": "01-home.jpg",
+    "title": "CMS: Home",
+    "url": "http://localhost:8080/web/cms/home",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "cms",
+    "file": "02-dashboard.jpg",
+    "title": "CMS: Dashboard",
+    "url": "http://localhost:8080/web/cms/dashboard",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "cms",
+    "file": "03-shared-with-me.jpg",
+    "title": "CMS: Shared with Me",
+    "url": "http://localhost:8080/web/cms/shared-with-me",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "cms",
+    "file": "04-all.jpg",
+    "title": "CMS: All",
+    "url": "http://localhost:8080/web/cms/all",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "cms",
+    "file": "05-contents.jpg",
+    "title": "CMS: Contents",
+    "url": "http://localhost:8080/web/cms/contents",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "cms",
+    "file": "06-files.jpg",
+    "title": "CMS: Files",
+    "url": "http://localhost:8080/web/cms/files",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "cms",
+    "file": "07-recycle-bin.jpg",
+    "title": "CMS: Recycle Bin",
+    "url": "http://localhost:8080/web/cms/recycle-bin",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "cms",
+    "file": "08-all-spaces.jpg",
+    "title": "CMS: All Spaces",
+    "url": "http://localhost:8080/web/cms/all-spaces",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "cms",
+    "file": "09-new-space.jpg",
+    "title": "CMS: New Space",
+    "url": "http://localhost:8080/web/cms/new-space",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "cms",
+    "file": "10-export-import.jpg",
+    "title": "CMS: Export / Import",
+    "url": "http://localhost:8080/web/cms/export-import",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "cms",
+    "file": "11-overdue-reviews.jpg",
+    "title": "CMS: Overdue Reviews",
+    "url": "http://localhost:8080/web/cms/overdue-reviews",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "cms",
+    "file": "12-pending-workflows.jpg",
+    "title": "CMS: Pending Workflows",
+    "url": "http://localhost:8080/web/cms/pending-workflows",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "cms",
+    "file": "13-broken-links.jpg",
+    "title": "CMS: Broken Links",
+    "url": "http://localhost:8080/web/cms/broken-links",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "cms",
+    "file": "14-bulk-action-task-report.jpg",
+    "title": "CMS: Bulk Action Task Report",
+    "url": "http://localhost:8080/web/cms/bulk-action-task-report",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "web-content",
+    "file": "01-lista.jpg",
+    "title": "Web Content",
+    "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_journal_web_portlet_JournalPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "web-content",
+    "file": "02-editor.jpg",
+    "title": "Web Content: editor",
+    "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_journal_web_portlet_JournalPortlet",
+    "ok": true,
+    "note": "paso extra falló: locator.click: Timeout 8000ms exceeded.",
+    "scheme": "dark"
+  },
+  {
+    "dir": "web-content",
+    "file": "03-structures.jpg",
+    "title": "Web Content: Structures",
+    "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_journal_web_portlet_JournalPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "web-content",
+    "file": "04-templates.jpg",
+    "title": "Web Content: Templates",
+    "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_journal_web_portlet_JournalPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "blogs",
+    "file": "01-lista.jpg",
+    "title": "Blogs",
+    "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_blogs_web_portlet_BlogsAdminPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "blogs",
+    "file": "02-editor.jpg",
+    "title": "Blogs: editor",
+    "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_blogs_web_portlet_BlogsAdminPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "documents-and-media",
+    "file": "01-lista.jpg",
+    "title": "Documents and Media",
+    "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_document_library_web_portlet_DLAdminPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "documents-and-media",
+    "file": "02-detalle.jpg",
+    "title": "Documents and Media: detalle / preview",
+    "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_document_library_web_portlet_DLAdminPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "knowledge-base",
+    "file": "01-lista.jpg",
+    "title": "Knowledge Base",
+    "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_knowledge_base_web_portlet_AdminPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "message-boards",
+    "file": "01-lista.jpg",
+    "title": "Message Boards",
+    "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_message_boards_web_portlet_MBAdminPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "message-boards",
+    "file": "02-statistics.jpg",
+    "title": "Message Boards: Statistics",
+    "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_message_boards_web_portlet_MBAdminPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  }
+]

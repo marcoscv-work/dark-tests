@@ -1,0 +1,137 @@
+[
+  {
+    "dir": "catalogs",
+    "file": "01-lista.jpg",
+    "title": "Catalogs",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_commerce_catalog_web_internal_portlet_CommerceCatalogsPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "products",
+    "file": "01-lista.jpg",
+    "title": "Products",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_commerce_product_definitions_web_internal_portlet_CPDefinitionsPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "products",
+    "file": "02-editor.jpg",
+    "title": "Products: editor",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_commerce_product_definitions_web_internal_portlet_CPDefinitionsPortlet",
+    "ok": true,
+    "note": "paso extra falló: locator.click: Timeout 8000ms exceeded.",
+    "scheme": "dark"
+  },
+  {
+    "dir": "pricing",
+    "file": "01-price-lists.jpg",
+    "title": "Price Lists",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_commerce_pricing_web_internal_portlet_CommercePriceListPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "pricing",
+    "file": "02-promotions.jpg",
+    "title": "Promotions",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_commerce_pricing_web_internal_portlet_CommercePromotionPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "pricing",
+    "file": "03-discounts.jpg",
+    "title": "Discounts",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_commerce_pricing_web_internal_portlet_CommerceDiscountPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "inventory",
+    "file": "01-inventory.jpg",
+    "title": "Inventory",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_commerce_inventory_web_internal_portlet_CommerceInventoryPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "orders",
+    "file": "01-orders.jpg",
+    "title": "Orders",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_commerce_order_web_internal_portlet_CommerceOrderPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "orders",
+    "file": "02-order-detail.jpg",
+    "title": "Orders: detalle",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_commerce_order_web_internal_portlet_CommerceOrderPortlet",
+    "ok": true,
+    "note": "paso extra falló: locator.click: Timeout 8000ms exceeded.",
+    "scheme": "dark"
+  },
+  {
+    "dir": "orders",
+    "file": "03-returns.jpg",
+    "title": "Returns",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_commerce_order_web_internal_portlet_CommerceReturnPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "orders",
+    "file": "04-shipments.jpg",
+    "title": "Shipments",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_commerce_shipment_web_internal_portlet_CommerceShipmentPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "orders",
+    "file": "05-payments.jpg",
+    "title": "Payments",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_commerce_payment_web_internal_portlet_CommercePaymentPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "channels",
+    "file": "01-lista.jpg",
+    "title": "Channels",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_commerce_channel_web_internal_portlet_CommerceChannelsPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  },
+  {
+    "dir": "channels",
+    "file": "02-editor.jpg",
+    "title": "Channels: editor",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_commerce_channel_web_internal_portlet_CommerceChannelsPortlet",
+    "ok": true,
+    "note": "paso extra falló: locator.click: Timeout 8000ms exceeded.",
+    "scheme": "dark"
+  },
+  {
+    "dir": "organizations",
+    "file": "01-organizations.jpg",
+    "title": "Organizations (Commerce)",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_commerce_organization_web_internal_portlet_CommerceOrganizationPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark"
+  }
+]

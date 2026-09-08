@@ -1,0 +1,192 @@
+[
+  {
+    "id": "01-objects-list",
+    "title": "Objects: lista de definiciones",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_object_web_internal_object_definitions_portlet_ObjectDefinitionsPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark",
+    "pageTitle": "Objects - Liferay",
+    "file": "objects/01-lista-definiciones.jpg"
+  },
+  {
+    "id": "02-objects-editor",
+    "title": "Objects: editor de definición (Fields)",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_object_web_internal_object_definitions_portlet_ObjectDefinitionsPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark",
+    "pageTitle": "Details - Edit Account - Liferay",
+    "file": "objects/02-editor-definicion.jpg"
+  },
+  {
+    "id": "03-objects-model-builder",
+    "title": "Objects: Model Builder",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_object_web_internal_object_definitions_portlet_ObjectDefinitionsPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark",
+    "pageTitle": "Object Model Builder - Liferay",
+    "file": "objects/03-model-builder.jpg"
+  },
+  {
+    "id": "04-picklists",
+    "title": "Picklists",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_object_web_internal_list_type_portlet_portlet_ListTypeDefinitionsPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark",
+    "pageTitle": "Picklists - Liferay",
+    "file": "picklists/01-lista.jpg"
+  },
+  {
+    "id": "05-picklist-editor",
+    "title": "Picklists: side panel de edición",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_object_web_internal_list_type_portlet_portlet_ListTypeDefinitionsPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark",
+    "pageTitle": "Picklists - Liferay",
+    "file": "picklists/02-side-panel-edicion.jpg"
+  },
+  {
+    "id": "06-process-builder",
+    "title": "Workflow: Process Builder (definiciones)",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_portal_workflow_web_portlet_ControlPanelWorkflowPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark",
+    "pageTitle": "Process Builder - Liferay",
+    "file": "workflow/01-process-builder.jpg"
+  },
+  {
+    "id": "07-kaleo-designer",
+    "title": "Workflow: Kaleo Designer (canvas Single Approver)",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_portal_workflow_web_portlet_ControlPanelWorkflowPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark",
+    "pageTitle": "Edit Workflow Definition - Liferay",
+    "file": "workflow/02-kaleo-designer-canvas.jpg"
+  },
+  {
+    "id": "08-workflow-metrics",
+    "title": "Workflow Metrics",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_portal_workflow_metrics_web_internal_portlet_WorkflowMetricsPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark",
+    "pageTitle": "Workflow Metrics - Liferay",
+    "file": "workflow/03-metrics.jpg"
+  },
+  {
+    "id": "09-workflow-submissions",
+    "title": "Workflow: Submissions (instancias)",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_portal_workflow_web_internal_portlet_ControlPanelWorkflowInstancePortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark",
+    "pageTitle": "Submissions - Liferay",
+    "file": "workflow/04-submissions.jpg"
+  },
+  {
+    "id": "10-instance-tracker",
+    "title": "Workflow: Instance Tracker",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_portal_workflow_instance_tracker_web_internal_portlet_WorkflowInstanceTrackerPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark",
+    "pageTitle": "Workflow Instance Tracker - Liferay",
+    "file": "workflow/05-instance-tracker.jpg"
+  },
+  {
+    "id": "11-site-workflow",
+    "title": "Workflow: configuración del sitio",
+    "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_portal_workflow_web_internal_portlet_SiteAdministrationWorkflowPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark",
+    "pageTitle": "Workflow - Liferay DXP Site - Liferay",
+    "file": "workflow/06-configuracion-sitio.jpg"
+  },
+  {
+    "id": "12-my-workflow-tasks",
+    "title": "My Workflow Tasks",
+    "url": "http://localhost:8080/user/test/~/control_panel/manage?p_p_id=com_liferay_portal_workflow_web_internal_portlet_UserWorkflowPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark",
+    "pageTitle": "My Submissions - Test Test - Liferay",
+    "file": "workflow/07-my-workflow-tasks.jpg"
+  },
+  {
+    "id": "13-kaleo-forms",
+    "title": "Kaleo Forms Admin",
+    "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_portal_workflow_kaleo_forms_web_portlet_KaleoFormsAdminPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark",
+    "pageTitle": "- Liferay DXP Site - Liferay",
+    "file": "workflow/08-kaleo-forms-admin.jpg"
+  },
+  {
+    "id": "14-forms-list",
+    "title": "Forms: lista",
+    "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_dynamic_data_mapping_form_web_portlet_DDMFormAdminPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark",
+    "pageTitle": "Forms - Liferay DXP Site - Liferay",
+    "file": "forms/01-lista.jpg"
+  },
+  {
+    "id": "15-forms-builder",
+    "title": "Forms: builder",
+    "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_dynamic_data_mapping_form_web_portlet_DDMFormAdminPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark",
+    "pageTitle": "New Form - Liferay DXP Site - Liferay",
+    "file": "forms/02-builder.jpg"
+  },
+  {
+    "id": "16-ddl",
+    "title": "Dynamic Data Lists",
+    "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_dynamic_data_lists_web_portlet_DDLPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark",
+    "pageTitle": "- Liferay DXP Site - Liferay",
+    "file": "dynamic-data-lists/01-lista.jpg"
+  },
+  {
+    "id": "17-ddm",
+    "title": "Data Providers / estructuras DDM",
+    "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_dynamic_data_mapping_web_portlet_DDMPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark",
+    "pageTitle": "Dynamic Data Mapping - Liferay DXP Site - Liferay",
+    "file": "ddm-data-providers/01-lista.jpg"
+  },
+  {
+    "id": "18-notification-templates",
+    "title": "Notification Templates",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_notification_web_internal_portlet_NotificationTemplatesPortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark",
+    "pageTitle": "Templates - Liferay",
+    "file": "notification-templates/01-lista.jpg"
+  },
+  {
+    "id": "19-digital-signature",
+    "title": "Digital Signature",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_digital_signature_web_internal_portlet_DigitalSignaturePortlet",
+    "ok": true,
+    "note": "",
+    "scheme": "dark",
+    "pageTitle": "Digital Signature - Liferay",
+    "file": "digital-signature/01-lista.jpg"
+  }
+]
