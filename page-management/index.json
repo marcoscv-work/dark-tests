@@ -2,7 +2,7 @@
   {
     "dir": "pages",
     "file": "01-arbol-paginas.jpg",
-    "title": "Pages: árbol",
+    "title": "Pages: page tree",
     "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_layout_admin_web_portlet_GroupPagesPortlet",
     "ok": true,
     "note": "",
@@ -11,7 +11,7 @@
   {
     "dir": "pages",
     "file": "02-configuracion-pagina.jpg",
-    "title": "Pages: configuración de una página",
+    "title": "Pages: page configuration",
     "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_layout_admin_web_portlet_GroupPagesPortlet",
     "ok": true,
     "note": "",
@@ -29,7 +29,7 @@
   {
     "dir": "page-editor",
     "file": "02-editor-fragments-panel.jpg",
-    "title": "Page Editor: panel Fragments and Widgets",
+    "title": "Page Editor: Fragments and Widgets panel",
     "url": "http://localhost:8080/web/guest/home?p_l_mode=edit",
     "ok": true,
     "note": "paso extra falló: locator.click: Timeout 8000ms exceeded.",

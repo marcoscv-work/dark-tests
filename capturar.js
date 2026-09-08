@@ -33,7 +33,7 @@ const TEAMS = {
 		{dir: 'result-rankings', file: '02-editor', title: 'Result Rankings: editor', url: CP + 'com_liferay_portal_search_tuning_rankings_web_internal_portlet_ResultRankingsPortlet', after: clickFirstRow},
 		{dir: 'collections', file: '01-lista', title: 'Collections', url: SITE + 'com_liferay_asset_list_web_portlet_AssetListPortlet'},
 		{dir: 'collections', file: '02-editor', title: 'Collections: editor', url: SITE + 'com_liferay_asset_list_web_portlet_AssetListPortlet', after: clickFirstRow},
-		{dir: 'search-page', file: '01-resultados', title: 'Página de búsqueda del sitio (widgets)', url: `${BASE}/web/guest/search?q=liferay`},
+		{dir: 'search-page', file: '01-resultados', title: 'Site search page (widgets)', url: `${BASE}/web/guest/search?q=liferay`},
 	],
 	'site-management': [
 		{dir: 'sites', file: '01-lista', title: 'Sites', url: CP + 'com_liferay_site_admin_web_portlet_SiteAdminPortlet'},
@@ -46,10 +46,10 @@ const TEAMS = {
 		{dir: 'staging', file: '01-staging', title: 'Staging', url: SITE + 'com_liferay_staging_processes_web_portlet_StagingProcessesPortlet'},
 	],
 	'page-management': [
-		{dir: 'pages', file: '01-arbol-paginas', title: 'Pages: árbol', url: SITE + 'com_liferay_layout_admin_web_portlet_GroupPagesPortlet'},
-		{dir: 'pages', file: '02-configuracion-pagina', title: 'Pages: configuración de una página', url: SITE + 'com_liferay_layout_admin_web_portlet_GroupPagesPortlet', after: clickFirstRow},
+		{dir: 'pages', file: '01-arbol-paginas', title: 'Pages: page tree', url: SITE + 'com_liferay_layout_admin_web_portlet_GroupPagesPortlet'},
+		{dir: 'pages', file: '02-configuracion-pagina', title: 'Pages: page configuration', url: SITE + 'com_liferay_layout_admin_web_portlet_GroupPagesPortlet', after: clickFirstRow},
 		{dir: 'page-editor', file: '01-editor', title: 'Page Editor', url: `${BASE}/web/guest/home?p_l_mode=edit`, wait: 6000},
-		{dir: 'page-editor', file: '02-editor-fragments-panel', title: 'Page Editor: panel Fragments and Widgets', url: `${BASE}/web/guest/home?p_l_mode=edit`, wait: 6000, after: async (page) => {
+		{dir: 'page-editor', file: '02-editor-fragments-panel', title: 'Page Editor: Fragments and Widgets panel', url: `${BASE}/web/guest/home?p_l_mode=edit`, wait: 6000, after: async (page) => {
 			await page.getByRole('button', {name: /fragments and widgets/i}).first().click({timeout: 8000});
 			await page.waitForTimeout(2500);
 		}},
@@ -81,7 +81,7 @@ const TEAMS = {
 		{dir: 'blogs', file: '01-lista', title: 'Blogs', url: SITE + 'com_liferay_blogs_web_portlet_BlogsAdminPortlet'},
 		{dir: 'blogs', file: '02-editor', title: 'Blogs: editor', url: SITE + 'com_liferay_blogs_web_portlet_BlogsAdminPortlet', after: clickText(/^new$|add blog entry/i, 5000)},
 		{dir: 'documents-and-media', file: '01-lista', title: 'Documents and Media', url: SITE + 'com_liferay_document_library_web_portlet_DLAdminPortlet'},
-		{dir: 'documents-and-media', file: '02-detalle', title: 'Documents and Media: detalle / preview', url: SITE + 'com_liferay_document_library_web_portlet_DLAdminPortlet', after: clickFirstRow},
+		{dir: 'documents-and-media', file: '02-detalle', title: 'Documents and Media: detail / preview', url: SITE + 'com_liferay_document_library_web_portlet_DLAdminPortlet', after: clickFirstRow},
 		{dir: 'knowledge-base', file: '01-lista', title: 'Knowledge Base', url: SITE + 'com_liferay_knowledge_base_web_portlet_AdminPortlet'},
 		{dir: 'message-boards', file: '01-lista', title: 'Message Boards', url: SITE + 'com_liferay_message_boards_web_portlet_MBAdminPortlet'},
 		{dir: 'message-boards', file: '02-statistics', title: 'Message Boards: Statistics', url: SITE + 'com_liferay_message_boards_web_portlet_MBAdminPortlet', after: clickText(/statistics/i)},
@@ -95,7 +95,7 @@ const TEAMS = {
 		{dir: 'pricing', file: '03-discounts', title: 'Discounts', url: CP + 'com_liferay_commerce_pricing_web_internal_portlet_CommerceDiscountPortlet'},
 		{dir: 'inventory', file: '01-inventory', title: 'Inventory', url: CP + 'com_liferay_commerce_inventory_web_internal_portlet_CommerceInventoryPortlet'},
 		{dir: 'orders', file: '01-orders', title: 'Orders', url: CP + 'com_liferay_commerce_order_web_internal_portlet_CommerceOrderPortlet'},
-		{dir: 'orders', file: '02-order-detail', title: 'Orders: detalle', url: CP + 'com_liferay_commerce_order_web_internal_portlet_CommerceOrderPortlet', after: clickFirstRow},
+		{dir: 'orders', file: '02-order-detail', title: 'Orders: detail', url: CP + 'com_liferay_commerce_order_web_internal_portlet_CommerceOrderPortlet', after: clickFirstRow},
 		{dir: 'orders', file: '03-returns', title: 'Returns', url: CP + 'com_liferay_commerce_order_web_internal_portlet_CommerceReturnPortlet'},
 		{dir: 'orders', file: '04-shipments', title: 'Shipments', url: CP + 'com_liferay_commerce_shipment_web_internal_portlet_CommerceShipmentPortlet'},
 		{dir: 'orders', file: '05-payments', title: 'Payments', url: CP + 'com_liferay_commerce_payment_web_internal_portlet_CommercePaymentPortlet'},

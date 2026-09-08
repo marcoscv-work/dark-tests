@@ -92,7 +92,7 @@
   {
     "dir": "search-page",
     "file": "01-resultados.jpg",
-    "title": "Página de búsqueda del sitio (widgets)",
+    "title": "Site search page (widgets)",
     "url": "http://localhost:8080/web/guest/search?q=liferay",
     "ok": true,
     "note": "",

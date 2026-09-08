@@ -191,7 +191,7 @@
   {
     "dir": "documents-and-media",
     "file": "02-detalle.jpg",
-    "title": "Documents and Media: detalle / preview",
+    "title": "Documents and Media: detail / preview",
     "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_document_library_web_portlet_DLAdminPortlet",
     "ok": true,
     "note": "",

@@ -1,7 +1,7 @@
 [
   {
     "id": "01-objects-list",
-    "title": "Objects: lista de definiciones",
+    "title": "Objects: definitions list",
     "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_object_web_internal_object_definitions_portlet_ObjectDefinitionsPortlet",
     "ok": true,
     "note": "",
@@ -11,7 +11,7 @@
   },
   {
     "id": "02-objects-editor",
-    "title": "Objects: editor de definición (Fields)",
+    "title": "Objects: definition editor",
     "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_object_web_internal_object_definitions_portlet_ObjectDefinitionsPortlet",
     "ok": true,
     "note": "",
@@ -41,7 +41,7 @@
   },
   {
     "id": "05-picklist-editor",
-    "title": "Picklists: side panel de edición",
+    "title": "Picklists: edit side panel",
     "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_object_web_internal_list_type_portlet_portlet_ListTypeDefinitionsPortlet",
     "ok": true,
     "note": "",
@@ -51,7 +51,7 @@
   },
   {
     "id": "06-process-builder",
-    "title": "Workflow: Process Builder (definiciones)",
+    "title": "Workflow: Process Builder (definitions)",
     "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_portal_workflow_web_portlet_ControlPanelWorkflowPortlet",
     "ok": true,
     "note": "",
@@ -61,7 +61,7 @@
   },
   {
     "id": "07-kaleo-designer",
-    "title": "Workflow: Kaleo Designer (canvas Single Approver)",
+    "title": "Workflow: Kaleo Designer (Single Approver canvas)",
     "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_portal_workflow_web_portlet_ControlPanelWorkflowPortlet",
     "ok": true,
     "note": "",
@@ -81,7 +81,7 @@
   },
   {
     "id": "09-workflow-submissions",
-    "title": "Workflow: Submissions (instancias)",
+    "title": "Workflow: Submissions (instances)",
     "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_portal_workflow_web_internal_portlet_ControlPanelWorkflowInstancePortlet",
     "ok": true,
     "note": "",
@@ -101,7 +101,7 @@
   },
   {
     "id": "11-site-workflow",
-    "title": "Workflow: configuración del sitio",
+    "title": "Workflow: site configuration",
     "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_portal_workflow_web_internal_portlet_SiteAdministrationWorkflowPortlet",
     "ok": true,
     "note": "",
@@ -131,7 +131,7 @@
   },
   {
     "id": "14-forms-list",
-    "title": "Forms: lista",
+    "title": "Forms: list",
     "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_dynamic_data_mapping_form_web_portlet_DDMFormAdminPortlet",
     "ok": true,
     "note": "",
@@ -161,7 +161,7 @@
   },
   {
     "id": "17-ddm",
-    "title": "Data Providers / estructuras DDM",
+    "title": "DDM: Data Providers / structures",
     "url": "http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay_dynamic_data_mapping_web_portlet_DDMPortlet",
     "ok": true,
     "note": "",

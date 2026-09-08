@@ -9,8 +9,8 @@ const CP = `${BASE}/group/control_panel/manage?p_p_id=`;
 const SITE = `${BASE}/group/guest/~/control_panel/manage?p_p_id=`;
 
 const SCREENS = [
-	{id: '01-objects-list', dir: 'objects', file: '01-lista-definiciones', title: 'Objects: lista de definiciones', url: CP + 'com_liferay_object_web_internal_object_definitions_portlet_ObjectDefinitionsPortlet'},
-	{id: '02-objects-editor', dir: 'objects', file: '02-editor-definicion', title: 'Objects: editor de definición (Fields)', url: CP + 'com_liferay_object_web_internal_object_definitions_portlet_ObjectDefinitionsPortlet', after: async (page) => {
+	{id: '01-objects-list', dir: 'objects', file: '01-lista-definiciones', title: 'Objects: definitions list', url: CP + 'com_liferay_object_web_internal_object_definitions_portlet_ObjectDefinitionsPortlet'},
+	{id: '02-objects-editor', dir: 'objects', file: '02-editor-definicion', title: 'Objects: definition editor', url: CP + 'com_liferay_object_web_internal_object_definitions_portlet_ObjectDefinitionsPortlet', after: async (page) => {
 		await page.locator('.table-list-title a, table tbody tr td a').first().click({timeout: 8000});
 		await page.waitForTimeout(2500);
 	}},
@@ -20,22 +20,22 @@ const SCREENS = [
 		await page.waitForTimeout(3500);
 	}},
 	{id: '04-picklists', dir: 'picklists', file: '01-lista', title: 'Picklists', url: CP + 'com_liferay_object_web_internal_list_type_portlet_portlet_ListTypeDefinitionsPortlet'},
-	{id: '05-picklist-editor', dir: 'picklists', file: '02-side-panel-edicion', title: 'Picklists: side panel de edición', url: CP + 'com_liferay_object_web_internal_list_type_portlet_portlet_ListTypeDefinitionsPortlet', after: async (page) => {
+	{id: '05-picklist-editor', dir: 'picklists', file: '02-side-panel-edicion', title: 'Picklists: edit side panel', url: CP + 'com_liferay_object_web_internal_list_type_portlet_portlet_ListTypeDefinitionsPortlet', after: async (page) => {
 		await page.locator('.table-list-title a, table tbody tr td a').first().click({timeout: 8000});
 		await page.waitForTimeout(2500);
 	}},
-	{id: '06-process-builder', dir: 'workflow', file: '01-process-builder', title: 'Workflow: Process Builder (definiciones)', url: CP + 'com_liferay_portal_workflow_web_portlet_ControlPanelWorkflowPortlet'},
-	{id: '07-kaleo-designer', dir: 'workflow', file: '02-kaleo-designer-canvas', title: 'Workflow: Kaleo Designer (canvas Single Approver)', url: CP + 'com_liferay_portal_workflow_web_portlet_ControlPanelWorkflowPortlet', after: async (page) => {
+	{id: '06-process-builder', dir: 'workflow', file: '01-process-builder', title: 'Workflow: Process Builder (definitions)', url: CP + 'com_liferay_portal_workflow_web_portlet_ControlPanelWorkflowPortlet'},
+	{id: '07-kaleo-designer', dir: 'workflow', file: '02-kaleo-designer-canvas', title: 'Workflow: Kaleo Designer (Single Approver canvas)', url: CP + 'com_liferay_portal_workflow_web_portlet_ControlPanelWorkflowPortlet', after: async (page) => {
 		await page.getByRole('link', {name: /single approver/i}).first().click({timeout: 8000});
 		await page.waitForTimeout(4000);
 	}},
 	{id: '08-workflow-metrics', dir: 'workflow', file: '03-metrics', title: 'Workflow Metrics', url: CP + 'com_liferay_portal_workflow_metrics_web_internal_portlet_WorkflowMetricsPortlet'},
-	{id: '09-workflow-submissions', dir: 'workflow', file: '04-submissions', title: 'Workflow: Submissions (instancias)', url: CP + 'com_liferay_portal_workflow_web_internal_portlet_ControlPanelWorkflowInstancePortlet'},
+	{id: '09-workflow-submissions', dir: 'workflow', file: '04-submissions', title: 'Workflow: Submissions (instances)', url: CP + 'com_liferay_portal_workflow_web_internal_portlet_ControlPanelWorkflowInstancePortlet'},
 	{id: '10-instance-tracker', dir: 'workflow', file: '05-instance-tracker', title: 'Workflow: Instance Tracker', url: CP + 'com_liferay_portal_workflow_instance_tracker_web_internal_portlet_WorkflowInstanceTrackerPortlet'},
-	{id: '11-site-workflow', dir: 'workflow', file: '06-configuracion-sitio', title: 'Workflow: configuración del sitio', url: SITE + 'com_liferay_portal_workflow_web_internal_portlet_SiteAdministrationWorkflowPortlet'},
+	{id: '11-site-workflow', dir: 'workflow', file: '06-configuracion-sitio', title: 'Workflow: site configuration', url: SITE + 'com_liferay_portal_workflow_web_internal_portlet_SiteAdministrationWorkflowPortlet'},
 	{id: '12-my-workflow-tasks', dir: 'workflow', file: '07-my-workflow-tasks', title: 'My Workflow Tasks', url: `${BASE}/user/test/~/control_panel/manage?p_p_id=com_liferay_portal_workflow_web_internal_portlet_UserWorkflowPortlet`},
 	{id: '13-kaleo-forms', dir: 'workflow', file: '08-kaleo-forms-admin', title: 'Kaleo Forms Admin', url: SITE + 'com_liferay_portal_workflow_kaleo_forms_web_portlet_KaleoFormsAdminPortlet'},
-	{id: '14-forms-list', dir: 'forms', file: '01-lista', title: 'Forms: lista', url: SITE + 'com_liferay_dynamic_data_mapping_form_web_portlet_DDMFormAdminPortlet'},
+	{id: '14-forms-list', dir: 'forms', file: '01-lista', title: 'Forms: list', url: SITE + 'com_liferay_dynamic_data_mapping_form_web_portlet_DDMFormAdminPortlet'},
 	{id: '15-forms-builder', dir: 'forms', file: '02-builder', title: 'Forms: builder', url: SITE + 'com_liferay_dynamic_data_mapping_form_web_portlet_DDMFormAdminPortlet', after: async (page) => {
 		const first = page.locator('.table-list-title a, table tbody tr td a, .card-title a').first();
 		if (await first.count()) {
@@ -47,7 +47,7 @@ const SCREENS = [
 		await page.waitForTimeout(5000);
 	}},
 	{id: '16-ddl', dir: 'dynamic-data-lists', file: '01-lista', title: 'Dynamic Data Lists', url: SITE + 'com_liferay_dynamic_data_lists_web_portlet_DDLPortlet'},
-	{id: '17-ddm', dir: 'ddm-data-providers', file: '01-lista', title: 'Data Providers / estructuras DDM', url: SITE + 'com_liferay_dynamic_data_mapping_web_portlet_DDMPortlet'},
+	{id: '17-ddm', dir: 'ddm-data-providers', file: '01-lista', title: 'DDM: Data Providers / structures', url: SITE + 'com_liferay_dynamic_data_mapping_web_portlet_DDMPortlet'},
 	{id: '18-notification-templates', dir: 'notification-templates', file: '01-lista', title: 'Notification Templates', url: CP + 'com_liferay_notification_web_internal_portlet_NotificationTemplatesPortlet'},
 	{id: '19-digital-signature', dir: 'digital-signature', file: '01-lista', title: 'Digital Signature', url: CP + 'com_liferay_digital_signature_web_internal_portlet_DigitalSignaturePortlet'},
 ];
