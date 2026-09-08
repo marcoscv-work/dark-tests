@@ -92,11 +92,11 @@
   {
     "id": "10-instance-tracker",
     "title": "Workflow: Instance Tracker",
-    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_portal_workflow_instance_tracker_web_internal_portlet_WorkflowInstanceTrackerPortlet",
+    "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_portal_workflow_web_internal_portlet_ControlPanelWorkflowInstancePortlet",
     "ok": true,
     "note": "",
     "scheme": "dark",
-    "pageTitle": "Workflow Instance Tracker - Liferay",
+    "pageTitle": "Single Approver: Pending: Q4 dark mode roadmap - Liferay",
     "file": "workflow/05-instance-tracker.jpg"
   },
   {

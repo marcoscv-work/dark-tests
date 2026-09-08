@@ -48,9 +48,9 @@
     "dir": "page-templates",
     "file": "02-master-pages.jpg",
     "title": "Page Templates: Master Pages",
-    "url": "http://localhost:8080/group/masterclass/~/control_panel/manage?p_p_id=com_liferay_layout_page_template_admin_web_portlet_LayoutPageTemplatesPortlet",
+    "url": "http://localhost:8080/group/masterclass/~/control_panel/manage?p_p_id=com_liferay_layout_page_template_admin_web_portlet_LayoutPageTemplatesPortlet&_com_liferay_layout_page_template_admin_web_portlet_LayoutPageTemplatesPortlet_tabs1=master-layouts",
     "ok": true,
-    "note": "paso extra falló: locator.click: Timeout 8000ms exceeded.",
+    "note": "",
     "scheme": "dark"
   },
   {
