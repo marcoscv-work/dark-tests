@@ -122,7 +122,7 @@ async function uploadDocument(scopePath, name, content, type) {
 			}
 			const paid = created.find((c) => c.spec.paymentStatus === 0) || created[0];
 			if (paid) {
-				await step('payment entry', () => post('/o/headless-commerce-admin-payment/v1.0/payments', {amount: 250, channelId: channel.id, currencyCode: channel.currencyCode || 'USD', paymentStatus: 0, reasonKey: 'sample'}).then((p) => p.id));
+				await step('payment entry', () => post('/o/headless-commerce-admin-payment/v1.0/payments', {amount: 250, channelId: channel.id, currencyCode: channel.currencyCode || 'USD', paymentStatus: 0, relatedItemName: 'com.liferay.commerce.model.CommerceOrder', relatedItemId: paid.order.id, comment: 'Sample payment for the Dark Mode gallery'}).then((p) => p.id));
 			}
 		}
 	}

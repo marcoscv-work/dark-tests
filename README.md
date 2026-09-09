@@ -26,6 +26,7 @@ Empty screens hide most dark mode issues, so the capture runs against seeded dat
 - `seed/seed-api.js`: Knowledge Base, Message Boards, blogs, web content, documents, a picklist, an object with entries, a notification template, a search blueprint and a publication, through REST APIs. Idempotent.
 - `seed/seed-space-orders.js`: documents and web contents inside the first CMS Space (with Single Approver so two items stay pending) and four Commerce orders plus a shipment on the Minium Full data. The CMS only lists assets that live in a Space, so site content never shows there.
 - `seed/seed-cms.js`: CMS assets are Object entries (CMSBasicWebContent, CMSBlog, CMSBasicDocument) scoped to a Space; this seeds web contents, blogs and documents through `/o/cms/*`, plus one expired asset with a past review date.
+- `seed/seed-cms.js` also creates a second administrator (`reviewer@liferay.com` / `Reviewer2026!`), makes them a Space member and shares one item with them; `capturar.js` logs in as that user for the CMS "Shared with Me" screen (`SHOTS_REVIEWER_USER` / `SHOTS_REVIEWER_PASSWORD` override the credentials).
 - `seed/seed-ui.js`: a published form, a synonym set, a result ranking and Single Approver on Blogs, driven through the UI with Playwright.
 
 `bash seed/seed-all.sh` runs everything above and then recaptures every team.

@@ -84,7 +84,6 @@ page = f"""<!doctype html>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 :root {{ --ground:#1b1b23; --surface:#272833; --surface-2:#393a4a; --line:#393a4a; --line-strong:#495057; --ink:#f7f8f9; --ink-2:#e7e7ed; --muted:#a7a9bc; --accent:#429aff; --accent-soft:#0e2a4d; --warn:#ffb570; color-scheme: dark; }}
-:root[data-theme="light"] {{ --ground:#ffffff; --surface:#f7f8f9; --surface-2:#f1f2f5; --line:#e7e7ed; --line-strong:#cdced9; --ink:#272833; --ink-2:#495057; --muted:#6b6c7e; --accent:#006eff; --accent-soft:#e5f1ff; --warn:#b95000; color-scheme: light; }}
 * {{ box-sizing:border-box; }}
 body {{ margin:0; background:var(--ground); color:var(--ink); font:14px/1.5 "IBM Plex Sans",system-ui,sans-serif; }}
 a {{ color:var(--accent); text-decoration:none; }} a:hover {{ text-decoration:underline; }}
@@ -132,7 +131,6 @@ a {{ color:var(--accent); text-decoration:none; }} a:hover {{ text-decoration:un
   <div><h1>Dark Mode Screens</h1><div class="meta">{len(all_items)} screenshots · {today} · local master bundle with feature flag LPD-57922 enabled</div></div>
   <nav class="nav" id="nav"><a href="#" data-team="all" class="active">All <span class="count">{len(all_items)}</span></a>{nav}</nav>
   <button class="chip" id="size" type="button" title="Thumbnail size">Thumbnails: M</button>
-  <button class="chip" id="theme" type="button">Light page</button>
 </div>
 <div class="wrap">
   <p class="hint">Every thumbnail is an administration screen captured with the dark colour scheme active. White blocks and low-contrast areas stand out at a glance. Click to enlarge, click again for actual size (1440 px), use the arrow keys to move between screens and Esc to close. Each screen links to the local URL used to reproduce it.</p>
@@ -185,8 +183,6 @@ document.getElementById('nav').addEventListener('click', e => {{
 // thumbnail size
 const sizes = [['S', '150px'], ['M', '220px'], ['L', '320px'], ['XL', '460px']]; let si = 1;
 document.getElementById('size').onclick = function () {{ si = (si + 1) % sizes.length; document.documentElement.style.setProperty('--thumb', sizes[si][1]); this.textContent = 'Thumbnails: ' + sizes[si][0]; }};
-// page theme (screenshots are unaffected)
-document.getElementById('theme').onclick = function () {{ const r = document.documentElement; const dark = r.getAttribute('data-theme') !== 'light'; r.setAttribute('data-theme', dark ? 'light' : 'dark'); this.textContent = dark ? 'Dark page' : 'Light page'; }};
 </script>
 </body>
 </html>"""

@@ -78,6 +78,26 @@ const daysAgo = (n) => new Date(Date.now() - n * 86400000).toISOString();
 		await ensure('basic-web-contents', title, {content: `<p>${text}</p>`});
 	}
 
+
+	// --- a second user, so "Shared with Me" has something for them ---
+	await step('reviewer user + space membership + shared item', async () => {
+		let users = (await get('/o/headless-admin-user/v1.0/user-accounts?filter=emailAddress%20eq%20%27reviewer%40liferay.com%27')).items || [];
+		let reviewer = users[0];
+		if (!reviewer) reviewer = await post('/o/headless-admin-user/v1.0/user-accounts', {alternateName: 'reviewer', emailAddress: 'reviewer@liferay.com', familyName: 'Reviewer', givenName: 'Dark Mode', password: 'Reviewer2026!'});
+		const adminRole = (await get('/o/headless-admin-user/v1.0/roles?pageSize=100')).items.find((r) => r.name === 'Administrator');
+		await jsonws('/role/add-user-roles', {userId: reviewer.id, roleIds: adminRole.id}).catch(() => {});
+		await jsonws('/user/add-group-users', {groupId: scope, userIds: reviewer.id}).catch(() => {});
+		const item = (await existing('basic-web-contents')).find((i) => i.title === 'Token migration guide');
+		if (item) await api('PUT', `/o/cms/basic-web-contents/${item.id}/collaborators/by-email-address/reviewer@liferay.com`, {type: 'User', actionIds: ['VIEW']});
+		return `reviewer ${reviewer.id}`;
+	});
+	// --- a bulk action task, so the Bulk Action Task Report has a row ---
+	await step('bulk action task', async () => {
+		const tasks = (await get('/o/cms/bulk-action-tasks/?pageSize=5')).items || [];
+		if (tasks.length) return 'already there';
+		return (await post('/o/cms/bulk-action-tasks/', {type: 'expire'})).id;
+	});
+
 	const all = await existing('basic-web-contents');
 	log(`web contents in the space: ${all.length}, statuses: ${[...new Set(all.map((i) => i.status && (i.status.label || i.status)))].join(', ')}`);
 	log('done');

@@ -20,7 +20,7 @@
   {
     "dir": "cms",
     "file": "03-shared-with-me.jpg",
-    "title": "CMS: Shared with Me",
+    "title": "CMS: Shared with Me (as reviewer)",
     "url": "http://localhost:8080/web/cms/shared-with-me",
     "ok": true,
     "note": "",

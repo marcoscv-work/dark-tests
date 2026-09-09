@@ -68,7 +68,7 @@
     "title": "Result Rankings: editor",
     "url": "http://localhost:8080/group/control_panel/manage?p_p_id=com_liferay_portal_search_tuning_rankings_web_internal_portlet_ResultRankingsPortlet",
     "ok": true,
-    "note": "paso extra falló: locator.click: Timeout 8000ms exceeded.",
+    "note": "",
     "scheme": "dark"
   },
   {

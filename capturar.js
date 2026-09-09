@@ -33,7 +33,7 @@ const TEAMS = {
 		{dir: 'blueprints', file: '03-elements', title: 'Search Blueprints: Elements', url: CP + 'com_liferay_search_experiences_web_internal_blueprint_admin_portlet_SXPBlueprintAdminPortlet', after: clickText(/^elements$/i)},
 		{dir: 'synonyms', file: '01-lista', title: 'Synonyms', url: CP + 'com_liferay_portal_search_tuning_synonyms_web_internal_portlet_SynonymsPortlet'},
 		{dir: 'result-rankings', file: '01-lista', title: 'Result Rankings', url: CP + 'com_liferay_portal_search_tuning_rankings_web_internal_portlet_ResultRankingsPortlet'},
-		{dir: 'result-rankings', file: '02-editor', title: 'Result Rankings: editor', url: CP + 'com_liferay_portal_search_tuning_rankings_web_internal_portlet_ResultRankingsPortlet', after: clickFirstRow},
+		{dir: 'result-rankings', file: '02-editor', title: 'Result Rankings: editor', url: CP + 'com_liferay_portal_search_tuning_rankings_web_internal_portlet_ResultRankingsPortlet', after: async (page) => { await page.locator('table a, .list-group a, a[href*="rankings"]').filter({hasText: /dark mode/i}).first().click({timeout: 8000}); await page.waitForTimeout(4000); }},
 		{dir: 'collections', file: '01-lista', title: 'Collections', url: SITE + 'com_liferay_asset_list_web_portlet_AssetListPortlet'},
 		{dir: 'collections', file: '02-editor', title: 'Collections: editor', url: SITE + 'com_liferay_asset_list_web_portlet_AssetListPortlet', after: clickFirstRow},
 		{dir: 'search-page', file: '01-resultados', title: 'Site search page (widgets)', url: `${SITE_HOME}/search?q=dark`},
@@ -52,12 +52,12 @@ const TEAMS = {
 		{dir: 'pages', file: '01-arbol-paginas', title: 'Pages: page tree', url: SITE + 'com_liferay_layout_admin_web_portlet_GroupPagesPortlet'},
 		{dir: 'pages', file: '02-configuracion-pagina', title: 'Pages: page configuration', url: SITE + 'com_liferay_layout_admin_web_portlet_GroupPagesPortlet', after: clickFirstRow},
 		{dir: 'page-editor', file: '01-editor', title: 'Page Editor', url: `${SITE_HOME}/home?p_l_mode=edit`, wait: 6000},
-		{dir: 'page-editor', file: '02-editor-fragments-panel', title: 'Page Editor: Fragments and Widgets panel', url: `${SITE_HOME}/home?p_l_mode=edit`, wait: 6000, after: async (page) => {
-			await page.locator('button[aria-label*="Fragments and Widgets" i], [title*="Fragments and Widgets" i], button[aria-label*="Fragments" i]').first().click({timeout: 8000});
+		{dir: 'page-editor', file: '02-editor-widgets-panel', title: 'Page Editor: Widgets tab', url: `${SITE_HOME}/home?p_l_mode=edit`, wait: 6000, after: async (page) => {
+			await page.getByRole('button', {name: /^widgets$/i}).first().click({timeout: 8000});
 			await page.waitForTimeout(2500);
 		}},
 		{dir: 'page-templates', file: '01-lista', title: 'Page Templates', url: SITE + 'com_liferay_layout_page_template_admin_web_portlet_LayoutPageTemplatesPortlet'},
-		{dir: 'page-templates', file: '02-master-pages', title: 'Page Templates: Master Pages', url: SITE + 'com_liferay_layout_page_template_admin_web_portlet_LayoutPageTemplatesPortlet&_com_liferay_layout_page_template_admin_web_portlet_LayoutPageTemplatesPortlet_tabs1=master-layouts'},
+		{dir: 'page-templates', file: '02-master-pages', title: 'Page Templates: Master Pages', url: SITE + 'com_liferay_layout_page_template_admin_web_portlet_LayoutPageTemplatesPortlet', after: clickText(/^masters$/i)},
 		{dir: 'page-templates', file: '03-display-page-templates', title: 'Page Templates: Display Page Templates', url: SITE + 'com_liferay_layout_page_template_admin_web_portlet_LayoutPageTemplatesPortlet', after: clickText(/display page templates/i)},
 		{dir: 'fragments', file: '01-lista', title: 'Fragments', url: SITE + 'com_liferay_fragment_web_portlet_FragmentPortlet'},
 		{dir: 'fragments', file: '02-editor', title: 'Fragments: editor', url: SITE + 'com_liferay_fragment_web_portlet_FragmentPortlet', after: clickFirstRow},
@@ -65,7 +65,7 @@ const TEAMS = {
 	'content-management': [
 		{dir: 'cms', file: '01-home', title: 'CMS: Home', url: CMS_SITE + '/home', wait: 6000},
 		{dir: 'cms', file: '02-dashboard', title: 'CMS: Dashboard', url: CMS_SITE + '/dashboard', wait: 6000},
-		{dir: 'cms', file: '03-shared-with-me', title: 'CMS: Shared with Me', url: CMS_SITE + '/shared-with-me', wait: 6000},
+		{dir: 'cms', file: '03-shared-with-me', title: 'CMS: Shared with Me (as reviewer)', url: CMS_SITE + '/shared-with-me', wait: 6000, as: 'reviewer'},
 		{dir: 'cms', file: '04-all', title: 'CMS: All', url: CMS_SITE + '/all', wait: 6000},
 		{dir: 'cms', file: '05-contents', title: 'CMS: Contents', url: CMS_SITE + '/contents', wait: 6000},
 		{dir: 'cms', file: '06-files', title: 'CMS: Files', url: CMS_SITE + '/files', wait: 6000},
@@ -78,7 +78,7 @@ const TEAMS = {
 		{dir: 'cms', file: '13-broken-links', title: 'CMS: Broken Links', url: CMS_SITE + '/broken-links', wait: 6000},
 		{dir: 'cms', file: '14-bulk-action-task-report', title: 'CMS: Bulk Action Task Report', url: CMS_SITE + '/bulk-action-task-report', wait: 6000},
 		{dir: 'web-content', file: '01-lista', title: 'Web Content', url: SITE + 'com_liferay_journal_web_portlet_JournalPortlet'},
-		{dir: 'web-content', file: '02-editor', title: 'Web Content: editor', url: SITE + 'com_liferay_journal_web_portlet_JournalPortlet', after: clickText(/accessibility statement|welcome to the dark side/i, 5000)},
+		{dir: 'web-content', file: '02-editor', title: 'Web Content: editor', url: SITE + 'com_liferay_journal_web_portlet_JournalPortlet', after: async (page) => { await page.locator('a[title="Accessibility statement"], a[title="Welcome to the dark side"]').first().click({timeout: 8000}); await page.waitForTimeout(5000); }},
 		{dir: 'web-content', file: '03-structures', title: 'Web Content: Structures', url: SITE + 'com_liferay_journal_web_portlet_JournalPortlet', after: clickText(/^structures$/i)},
 		{dir: 'web-content', file: '04-templates', title: 'Web Content: Templates', url: SITE + 'com_liferay_journal_web_portlet_JournalPortlet', after: clickText(/^templates$/i)},
 		{dir: 'blogs', file: '01-lista', title: 'Blogs', url: SITE + 'com_liferay_blogs_web_portlet_BlogsAdminPortlet'},
@@ -127,23 +127,39 @@ const TEAMS = {
 	log('logged in');
 	const ff = await page.evaluate(() => Liferay.FeatureFlags && Liferay.FeatureFlags['LPD-57922']);
 	if (!ff) { console.error('El flag LPD-57922 no está activo; actívalo en Instance Settings > Feature Flags > Beta'); process.exit(3); }
-	const setScheme = async (s) => { await page.evaluate((v) => Liferay.Util.Session.set('com_liferay_application_list_taglib_SideNavigationColorScheme', v), s); await page.waitForTimeout(500); };
+	const setScheme = async (s, p = page) => { await p.evaluate((v) => Liferay.Util.Session.set('com_liferay_application_list_taglib_SideNavigationColorScheme', v), s); await p.waitForTimeout(500); };
 	await setScheme('dark');
+	let reviewerPage = null;
+	const getReviewerPage = async () => {
+		if (reviewerPage) return reviewerPage;
+		const ctx = await browser.newContext({viewport: {width: 1440, height: 1000}, colorScheme: 'dark'});
+		const p = await ctx.newPage();
+		await p.goto(`${BASE}/c/portal/login`, {waitUntil: 'load'});
+		await p.locator('input[name$="_login"]').fill(process.env.SHOTS_REVIEWER_USER || 'reviewer@liferay.com');
+		await p.locator('input[name$="_password"]').fill(process.env.SHOTS_REVIEWER_PASSWORD || 'Reviewer2026!');
+		await Promise.all([p.waitForNavigation({waitUntil: 'load', timeout: 30000}).catch(() => {}), p.locator('input[name$="_password"]').press('Enter')]);
+		await p.waitForTimeout(2500);
+		await p.goto(`${BASE}/web/guest/home`, {waitUntil: 'load'});
+		await setScheme('dark', p);
+		reviewerPage = p;
+		return p;
+	};
 
 	for (const team of teams) {
 		const OUT = path.join(ROOT, team);
 		const results = [];
 		for (const s of TEAMS[team]) {
 			const r = {dir: s.dir, file: s.file + '.jpg', title: s.title, url: s.url, ok: false, note: ''};
+			const pg = s.as === 'reviewer' ? await getReviewerPage() : page;
 			try {
-				await page.goto(s.url, {waitUntil: 'load', timeout: 60000});
-				await page.waitForTimeout(s.wait || 2500);
-				if (s.after) { try { await s.after(page); } catch (e) { r.note = 'paso extra falló: ' + e.message.split('\n')[0]; } }
-				r.scheme = await page.evaluate(() => document.documentElement.dataset.colorScheme);
-				const bodyText = await page.evaluate(() => document.body.innerText.slice(0, 600));
+				await pg.goto(s.url, {waitUntil: 'load', timeout: 60000});
+				await pg.waitForTimeout(s.wait || 2500);
+				if (s.after) { try { await s.after(pg); } catch (e) { r.note = 'paso extra falló: ' + e.message.split('\n')[0]; } }
+				r.scheme = await pg.evaluate(() => document.documentElement.dataset.colorScheme);
+				const bodyText = await pg.evaluate(() => document.body.innerText.slice(0, 600));
 				if (/not available|no está disponible|temporarily unavailable|Page Not Found|404/i.test(bodyText)) r.note += ' pantalla no disponible;';
 				fs.mkdirSync(path.join(OUT, s.dir), {recursive: true});
-				await page.screenshot({path: path.join(OUT, s.dir, r.file), type: 'jpeg', quality: 78});
+				await pg.screenshot({path: path.join(OUT, s.dir, r.file), type: 'jpeg', quality: 78});
 				r.ok = true;
 			}
 			catch (e) { r.note += ' ERROR ' + e.message.split('\n')[0]; }
